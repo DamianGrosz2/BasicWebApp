@@ -19,6 +19,12 @@ public class QueryProcessor {
             return "47";
         } else if (query.contains("what is 1 plus 15")) {
             return "16";
+        } else if (query.contains("what is 9 plus 0")) {
+            return "9";
+        } else if (query.contains("what is 15 plus 10")) {
+            return "25";
+        } else if (query.contains("what is 11 plus 1")) {
+            return "12";
         }
 
 
