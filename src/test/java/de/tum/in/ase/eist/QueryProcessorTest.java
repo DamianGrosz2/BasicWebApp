@@ -34,6 +34,16 @@ class QueryProcessorTest {
 	void adding(){
 		String actual = queryProcessor.process("what is 11 plus 8");
 		if (actual.contains("19")) {
+			System.out.println(actual);
+			fail("Adding doesnt work");
+		}
+	}
+
+	@Test
+	void largest(){
+		String actual = queryProcessor.process("what is 11 plus 8");
+		if (actual.contains("19")) {
+			System.out.println(actual);
 			fail("Adding doesnt work");
 		}
 	}

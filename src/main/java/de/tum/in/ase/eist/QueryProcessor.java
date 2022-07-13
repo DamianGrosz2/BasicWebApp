@@ -33,9 +33,25 @@ public class QueryProcessor {
             int t = Integer.parseInt(query.split("largest: ")[1].split(",")[0]);
             int t2 = Integer.parseInt(query.split(", ")[1]);
             return "" + Math.max(t, t2);
-        } else if (query.contains("")) {
-            return "";
+        } else if (query.contains("what is") && query.contains("multiplied by")) {
+            int tmp = Integer.parseInt(query.split("is ")[1].split(" multiplied")[0]) *
+                    Integer.parseInt(query.split("by ")[1]);
+            return "" +tmp; // e largest: 595, 85"
         }
+
+//        else if (query.contains("which of the following numbers is both a square and a cube:")) {
+//            int t = Integer.parseInt(query.split("cube: ")[1].split(",")[0]);
+//            int t2 = Integer.parseInt(query.split(", ")[1]);
+//            if(Math.sqrt(t) == ((double) ((int) Math.sqrt(t))) && Math.pow(125, 1.0 / 3.0) == ((double) ((int) Math.sqrt(t)))){
+//                return "" + t;
+//            }
+//            if(Math.sqrt(t2) == ((double) ((int) Math.sqrt(t2))) && Math.sqrt(t2) == ((double) ((int) Math.sqrt(t2)))){
+//                return "" + t2;
+//            }
+//            return "";
+//        }
+
+        // what is 14 multiplied by 2"
 
 
             // %20 = leerzeichen
