@@ -37,7 +37,10 @@ public class QueryProcessor {
             int tmp = Integer.parseInt(query.split("is ")[1].split(" multiplied")[0]) *
                     Integer.parseInt(query.split("by ")[1]);
             return "" +tmp; // e largest: 595, 85"
+        } else if (query.contains("what colour is a banana")) {
+            return "yellow"; // e largest: 595, 85"
         }
+
 
 //        else if (query.contains("which of the following numbers is both a square and a cube:")) {
 //            int t = Integer.parseInt(query.split("cube: ")[1].split(",")[0]);
