@@ -25,6 +25,11 @@ public class QueryProcessor {
             return "25";
         } else if (query.contains("what is 11 plus 1")) {
             return "12";
+        } else if (query.contains("what is" && query.contains("plus"))) {
+            return "" + Integer.parseInt(query.split("is ")[1].split(" plus"[0]) +
+                    Integer.parseInt(query.split("plus ")[1];
+
+            );
         }
 
 
