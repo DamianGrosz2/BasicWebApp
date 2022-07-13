@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 class QueryProcessorTest {
 
-	private final QueryProcessor queryProcessor = new QueryProcessor();
+	private final de.tum.in.ase.eist.QueryProcessor queryProcessor = new de.tum.in.ase.eist.QueryProcessor();
 
 	@Test
 	void testEmptyStringIfCannotProcessQuery() {
@@ -27,6 +27,14 @@ class QueryProcessorTest {
 		String actual = queryProcessor.process("shakespeare");
 		if (!actual.contains("playwright")) {
 			fail("Your QueryProcessor should not be case sensitive.");
+		}
+	}
+
+	@Test
+	void adding(){
+		String actual = queryProcessor.process("what is 11 plus 8");
+		if (actual.contains("19")) {
+			fail("Adding doesnt work");
 		}
 	}
 
