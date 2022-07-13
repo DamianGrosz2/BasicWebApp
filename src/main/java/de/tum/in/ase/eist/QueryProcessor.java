@@ -28,8 +28,11 @@ public class QueryProcessor {
         } else if (query.contains("what is" && query.contains("plus"))) {
             return "" + Integer.parseInt(query.split("is ")[1].split(" plus"[0]) +
                     Integer.parseInt(query.split("plus ")[1];
-
-            );
+            ); // e largest: 595, 85"
+        } else if (query.contains("which of the following numbers is the largest: ")) {
+            int t = Integer.parseInt(query.split("largest: ")[1].split(",")[0]);
+            int t2 = Integer.parseInt(query.split(", ")[1];
+            return "" + Math.max(t, t2);
         }
 
 
