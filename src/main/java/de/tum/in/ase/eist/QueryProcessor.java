@@ -39,7 +39,10 @@ public class QueryProcessor {
             return "" +tmp; // e largest: 595, 85"
         } else if (query.contains("what colour is a banana")) {
             return "yellow"; // e largest: 595, 85"
+        } else if (query.contains("which city is the Eiffel tower in")) {
+            return "paris"; // e largest: 595, 85"
         }
+
 
 
 //        else if (query.contains("which of the following numbers is both a square and a cube:")) {
