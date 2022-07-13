@@ -41,8 +41,33 @@ public class QueryProcessor {
             return "yellow"; // e largest: 595, 85"
         } else if (query.contains("which city is the Eiffel tower in")) {
             return "paris"; // e largest: 595, 85"
+        } else if (query.contains("which of the following numbers are primes: ")) {
+            int t = Integer.parseInt(query.split("primes: ")[1].split(",")[0]);
+            int t2 = Integer.parseInt(query.split(", ")[1]);
+            boolean flag = false;
+            for (int i = 2; i <= t / 2; ++i) {
+                if (t % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+            boolean flag2 = false;
+            for (int i = 2; i <= t2 / 2; ++i) {
+                if (t2 % i == 0) {
+                    flag2 = true;
+                    break;
+                }
+            }
+            if (!flag){
+                return "" + t;
+            } else if(!flag2) {
+                return "" + t2;
+            }
+            return "";
         }
 
+
+        //which of the following numbers are primes: 17, 826
 
 
 //        else if (query.contains("which of the following numbers is both a square and a cube:")) {

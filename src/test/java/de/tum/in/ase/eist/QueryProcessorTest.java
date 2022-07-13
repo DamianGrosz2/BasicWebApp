@@ -42,6 +42,11 @@ class QueryProcessorTest {
 	@Test
 	void largest(){
 		String actual = queryProcessor.process("what is 11 plus 8");
+//		String query = "which of the following numbers are primes: 1, 2";
+//		int t = Integer.parseInt(query.split("primes: ")[1].split(",")[0]);
+//		int t2 = Integer.parseInt(query.split(", ")[1]);
+//		System.out.println(t + "" + t2);
+
 		if (actual.contains("19")) {
 			System.out.println(actual);
 			fail("Adding doesnt work");
