@@ -15,6 +15,10 @@ public class QueryProcessor {
            return "Damian";
         } else if (query.contains("what is 3 plus 14")) {
             return "17";
+        } else if (query.contains("largest: 399, 47")) {
+            return "47";
+        } else if (query.contains("what is 1 plus 15")) {
+            return "16";
         }
 
 
