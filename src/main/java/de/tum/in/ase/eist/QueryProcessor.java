@@ -64,23 +64,33 @@ public class QueryProcessor {
                 return "" + t2;
             }
             return "";
+        } else if (query.contains("")) {
+            return "";
+        } else if (query.contains("")) {
+            return "";
+        } else if (query.contains("")) {
+            return "";
+        } else if (query.contains("")) {
+            return "";
+        } else if (query.contains("")) {
+            return "";
         }
 
 
         //which of the following numbers are primes: 17, 826
 
 
-//        else if (query.contains("which of the following numbers is both a square and a cube:")) {
-//            int t = Integer.parseInt(query.split("cube: ")[1].split(",")[0]);
-//            int t2 = Integer.parseInt(query.split(", ")[1]);
-//            if(Math.sqrt(t) == ((double) ((int) Math.sqrt(t))) && Math.pow(125, 1.0 / 3.0) == ((double) ((int) Math.sqrt(t)))){
-//                return "" + t;
-//            }
-//            if(Math.sqrt(t2) == ((double) ((int) Math.sqrt(t2))) && Math.sqrt(t2) == ((double) ((int) Math.sqrt(t2)))){
-//                return "" + t2;
-//            }
-//            return "";
-//        }
+        else if (query.contains("which of the following numbers is both a square and a cube:")) {
+            int t = Integer.parseInt(query.split("cube: ")[1].split(",")[0]);
+            int t2 = Integer.parseInt(query.split(", ")[1]);
+            if(Math.sqrt(t) == ((double) ((int) Math.sqrt(t))) && (Math.pow(t, 1.0/3.0) % 1 == 0)){
+                return "" + t;
+            }
+            if(Math.sqrt(t2) == ((double) ((int) Math.sqrt(t2))) && (Math.pow(t, 1.0/3.0) % 1 == 0)){
+                return "" + t2;
+            }
+            return "";
+        }
 
         // what is 14 multiplied by 2"
 
